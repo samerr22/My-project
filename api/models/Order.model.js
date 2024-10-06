@@ -5,7 +5,11 @@ const orderSchema = new mongoose.Schema({
  
 
   id: {
-    type: String,
+    type: Number,
+    required: true
+  },
+  Emid: {
+    type: Number,
     required: true
   },
   supname: {
@@ -17,7 +21,7 @@ const orderSchema = new mongoose.Schema({
     required: true
   },
   quantity: {
-    type: String, 
+    type: Number, 
     required: true
   },
   size: {

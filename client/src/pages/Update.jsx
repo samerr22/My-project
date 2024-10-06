@@ -96,17 +96,34 @@ export default function Update() {
         <div>
           <div className=" flex justify-center items-center">
             <div>
-              <h1 className="text-4xl mt-10 font-serif opacity-90 uppercase   text-white">
+              <h1 className="text-4xl mt-8 font-serif opacity-90 uppercase   text-white">
                palce orders
               </h1>
             </div>
           </div>
           <div>
-            <div className="flex justify-center mt-4 bg-slate-100 rounded-lg bg-opacity-60 h-[440px] w-[500px] items-center">
-              <form className="flex flex-col mt-10  gap-4" onSubmit={handleSubmit}>
+            <div className="flex justify-center mt-4 bg-slate-100 rounded-lg bg-opacity-60 h-[480px] w-[500px] items-center">
+              <form className="flex flex-col mt-6  gap-4" onSubmit={handleSubmit}>
                 <div className="flex justify-center items-center gap-28">
                   <div>
-                  <div className="mt-4">
+
+                  <div className="mt-2">
+                      <input
+                        className=" bg-slate-100 p-3 border-none rounded-lg w-[400px] h-10"
+                        type="text"
+                        placeholder="EmployeId"
+                        id="Emid"
+                        onChange={(e) => setFormData({ ...formData, Emid: e.target.value })}
+                        value={formData.Emid}
+                      />
+                     
+                        <p className="mt-0 text-red-600 h-0   text-sm    rounded-lg text-center ">
+                          Id Must be Number
+                        </p>
+                     
+
+                    </div>
+                  <div className="mt-5">
                       <input
                         className=" bg-slate-100 p-3 border-none rounded-lg w-[400px] h-10"
                         type="text"
@@ -115,8 +132,12 @@ export default function Update() {
                         onChange={(e) => setFormData({ ...formData, id: e.target.value })}
                         value={formData.id}
                       />
+                        <p className="mt-0 text-red-600 h-0   text-sm    rounded-lg text-center ">
+                          Id Must be Number
+                        </p>
+                     
                     </div>
-                    <div className="mt-4">
+                    <div className="mt-5">
                       <input
                         className=" bg-slate-100 p-3 border-none rounded-lg w-[400px] h-10"
                         type="text"
@@ -145,6 +166,10 @@ export default function Update() {
                         onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
                         value={formData.quantity}
                       />
+                        <p className="mt-0 text-red-600 h-0   text-sm    rounded-lg text-center ">
+                           Must be Number
+                        </p>
+                     
                     
                     </div>
 

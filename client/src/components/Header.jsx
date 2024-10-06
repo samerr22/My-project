@@ -54,8 +54,8 @@ export default function Header() {
             <Link to="/" className="text-black ml-[900px] hover:text-gray-200">
             <li  >Sign In</li>
           </Link>
-           <Link to="/adminlogin" className="text-black  hover:text-gray-200">
-           <li  >MangerLogin</li>
+           <Link to="/UserOrder" className="text-black  hover:text-gray-200">
+           <li  >MyOrder</li>
          </Link>
          </>
           )}

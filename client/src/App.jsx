@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Update from "./pages/Update";
 import MangeEmp from "./pages/NewAdd";
 import Order from "./pages/Order";
+import UserOrder from "./pages/UserOrder";
 
 
 
@@ -20,6 +21,7 @@ export default function App() {
        
         <Route path="/add" element={<MangeEmp />} />
         <Route path="/" element={<Order />} />
+        <Route path="/UserOrder" element={<UserOrder />} />
         <Route path="/manage/:idd" element={<Update />} />
        
   

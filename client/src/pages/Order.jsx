@@ -134,6 +134,7 @@ export default function ManageEmp() {
                 <thead className="bg-none divide-x divide-black">
                   <tr>
                     <th className="px-6 py-3 text-left text-xs bg-gray-700 text-white font-medium text-opacity-80 uppercase">userId</th>
+                    <th className="px-6 py-3 text-left text-xs bg-gray-700 text-white font-medium text-opacity-80 uppercase">EmployeeId</th>
                     <th className="px-6 py-3 text-left text-xs bg-gray-700 text-white font-medium text-opacity-80 uppercase">SupplierName</th>
                     <th className="px-6 py-3 text-left text-xs font-medium bg-gray-700 text-white text-opacity-80 uppercase">ProductName</th>
                     <th className="px-6 py-3 text-left text-xs font-medium bg-gray-700 text-white text-opacity-80 uppercase">Quantity</th>
@@ -149,7 +150,8 @@ export default function ManageEmp() {
                     <>
                       {filter.map((Employe) => (
                         <tr key={Employe._id} className="dark:border-gray-700 dark:bg-gray-800">
-                          <td className="px-6 py-4 font-serif whitespace-nowrap">{Employe.id}</td>
+                          <td className="px-6 py-4 font-serif whitespace-nowrap">S#00{Employe.id}</td>
+                          <td className="px-6 py-4 font-serif whitespace-nowrap">E#00{Employe.Emid}</td>
                           <td className="px-6 py-4 font-serif whitespace-nowrap">{Employe.supname}</td>
                           <td className="px-6 py-4 font-serif whitespace-nowrap">{Employe.productname}</td>
                           <td className="px-6 py-4 font-serif whitespace-nowrap">{Employe.quantity}</td>
@@ -177,6 +179,7 @@ export default function ManageEmp() {
                         </tr>
                       ))}
                     </>
+
                   ) : (
                     <p className="text-2xl font-serif absolute ml-[480px] opacity-60 mt-14">
                       You have no employee
@@ -184,6 +187,11 @@ export default function ManageEmp() {
                   )}
                 </tbody>
               </table>
+
+              <div className="flex justify-between px-6 py-4 bg-gray-200">
+             
+                <div className="font-bold">Total Order: {Info.length}</div>
+              </div>
 
              
               

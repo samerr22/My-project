@@ -9,14 +9,14 @@ export const create = async (req, res, next) => {
     supname,
     productname,
     quantity,
-    size,} = req.body;
+    size,Emid} = req.body;
 
   const newmark = new Order({
     id,
     supname,
     productname,
     quantity,
-    size,
+    size,Emid
   });
   try {
     const savedeuip = await newmark.save();
@@ -71,6 +71,7 @@ export const update = async (req, res, next) => {
           productname: req.body.productname,
           quantity: req.body.quantity,
           size: req.body.size,
+          Emid: req.body.Emid
           
         },
       },
